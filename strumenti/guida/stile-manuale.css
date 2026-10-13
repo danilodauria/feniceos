@@ -1,0 +1,111 @@
+/* Professore Digitale - stile dei manuali stampati (vademecum e guide). Danilo D'Auria - Licenza MIT
+ * Si stampa con tools/pdf-da-html.py (Chromium, A4). Caratteri: Noto Serif Display, Noto Sans, DejaVu Sans Mono. */
+@page { size: A4; }
+:root { --blu: #1d5c8f; --blu2: #174a73; --azz: #e3eef8; --ara: #c2410c; --ink: #1f2a37; --ink2: #4b5563; --linea: #d8dee6;
+        --verde: #15803d; --verde2: #e8f6ec; --giallo: #a16207; --giallo2: #fdf6dc; --crema: #f6f3ec; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; font: 10.2pt/1.55 "Noto Sans", "DejaVu Sans", sans-serif; color: var(--ink); }
+.pagina { padding: 0 18mm; }
+h1, h2, h3 { font-family: "Noto Serif Display", "Noto Serif", serif; color: var(--blu); font-weight: 700; line-height: 1.2; }
+h2 { font-size: 13.5pt; margin: 1.3em 0 .45em; break-after: avoid; }
+h3 { font-size: 11pt; margin: 1em 0 .35em; break-after: avoid; font-family: "Noto Sans", sans-serif; }
+p { margin: .45em 0; }
+b, strong { font-weight: 700; }
+code, .tasto, kbd { font-family: "DejaVu Sans Mono", monospace; font-size: .86em; }
+code { background: #eef2f6; padding: .05em .35em; border-radius: 4px; color: #0f3d63; }
+kbd { display: inline-block; border: 1px solid #b8c2cc; border-bottom-width: 2px; border-radius: 5px; padding: 0 .35em; background: #fff; font-size: .82em; }
+pre { background: #10263a; color: #e8f1f8; padding: .7em .9em; border-radius: 8px; font: 8.6pt/1.5 "DejaVu Sans Mono", monospace; white-space: pre-wrap; break-inside: avoid; }
+pre .c { color: #8fb3d1; }
+a { color: var(--blu); text-decoration: none; }
+ul, ol { margin: .4em 0; padding-left: 1.3em; }
+li { margin: .18em 0; }
+.small { font-size: 8.8pt; color: var(--ink2); }
+
+/* capitoli */
+.capitolo { break-before: page; padding-top: 4mm; }
+.capitolo-testa { display: flex; align-items: flex-end; gap: 4mm; border-bottom: 1.4px solid var(--blu); padding-bottom: 2.5mm; margin-bottom: 4mm; }
+.capitolo-testa .num { font: 700 38pt/0.9 "Noto Serif Display", serif; color: var(--ara); }
+.capitolo-testa .eti { font: 700 7pt "Noto Sans"; letter-spacing: .2em; color: var(--ink2); }
+.capitolo-testa h1 { margin: 0; font-size: 19pt; }
+.marca { font-size: 1px; color: #fff; display: block; height: 1px; overflow: hidden; }
+.intro { font-size: 10.8pt; color: var(--ink); margin-bottom: 1em; }
+
+/* figure */
+figure { margin: .8em 0 1em; break-inside: avoid; }
+figure img { width: 100%; border-radius: 6px; box-shadow: 0 1px 6px rgba(20, 40, 60, .25); display: block; }
+figure.media img { width: 72%; margin: 0 auto; }
+figure.piccola img { width: 46%; margin: 0 auto; }
+figcaption { font-size: 8.4pt; color: var(--ink2); margin-top: .45em; }
+figcaption b { color: var(--blu); }
+.affianca { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.affianca figure { margin: .4em 0; }
+
+/* tabelle */
+table { width: 100%; border-collapse: collapse; margin: .6em 0 1em; font-size: 9pt; break-inside: auto; }
+th { background: var(--blu); color: #fff; text-align: left; padding: .4em .55em; font-weight: 700; }
+td { padding: .38em .55em; border-bottom: 1px solid var(--linea); vertical-align: top; }
+tr { break-inside: avoid; }
+tbody tr:nth-child(even) td { background: #f7f9fb; }
+td.ico { width: 2em; font-size: 12pt; }
+.si { color: var(--verde); font-weight: 700; }
+.no { color: #b91c1c; font-weight: 700; }
+
+/* riquadri */
+.box { border-radius: 8px; padding: .65em .9em; margin: .8em 0; break-inside: avoid; border-left: 5px solid var(--blu); background: var(--azz); }
+.box .t { font: 700 7.6pt "Noto Sans"; letter-spacing: .14em; text-transform: uppercase; color: var(--blu); display: block; margin-bottom: .2em; }
+.box.consiglio { background: var(--verde2); border-color: var(--verde); }
+.box.consiglio .t { color: var(--verde); }
+.box.attenzione { background: var(--giallo2); border-color: var(--giallo); }
+.box.attenzione .t { color: var(--giallo); }
+.passi { list-style: none; padding: 0; counter-reset: p; }
+.passi > li { counter-increment: p; position: relative; padding-left: 2.2em; margin: .5em 0; break-inside: avoid; }
+.passi > li::before { content: counter(p); position: absolute; left: 0; top: -.05em; width: 1.55em; height: 1.55em; border-radius: 50%;
+  background: var(--blu); color: #fff; font-weight: 700; font-size: .9em; display: flex; align-items: center; justify-content: center; }
+.colonne { columns: 2; column-gap: 7mm; }
+.colonne > * { break-inside: avoid; }
+.glossario dt { font-weight: 700; color: var(--blu); margin-top: .5em; }
+.glossario dd { margin: 0 0 .2em; }
+.check { list-style: none; padding: 0; }
+.check li::before { content: "☐  "; color: var(--blu); }
+.pill { display: inline-block; border: 1.3px solid var(--blu); color: var(--blu); border-radius: 99px; padding: .1em .7em; font: 700 7.5pt "Noto Sans"; margin: 0 .3em .3em 0; }
+
+/* indice */
+.toc { list-style: none; padding: 0; margin: 0; }
+.toc li { display: grid; grid-template-columns: 9mm 1fr auto; padding: 1.6mm 0; border-bottom: 1px solid #edf0f4; }
+.toc .n { color: var(--ara); font: 700 11pt "Noto Serif Display"; }
+.toc .tt { font-weight: 700; }
+.toc .tt small { display: block; font-weight: 400; color: var(--ink2); font-size: 8pt; }
+.toc .toc-p { color: var(--blu); font-weight: 700; }
+
+/* copertina e quarta */
+.cover, .back { display: none; }
+body[data-modo="cover"] > *:not(.cover), body[data-modo="back"] > *:not(.back) { display: none !important; }
+body[data-modo="cover"] .cover, body[data-modo="back"] .back { display: block; width: 210mm; height: 297mm; overflow: hidden; position: relative; }
+body[data-modo="corpo"] .segnaposto { display: block; height: 10mm; break-after: page; }
+body[data-modo="corpo"] .segnaposto.fine { break-after: auto; break-before: page; }
+.segnaposto { display: none; }
+.cover .sopra { background: linear-gradient(160deg, #1d5c8f 0%, #174a73 70%, #123b5c 100%); height: 205mm; color: #fff; padding: 22mm 18mm 0; position: relative; }
+.cover .sopra .ka { font: 700 8pt "Noto Sans"; letter-spacing: .32em; color: #cfe3f5; }
+.cover .sopra h1 { color: #fff; font-size: 38pt; margin: 3mm 0 0; }
+.cover .sopra .sotto { font: 13pt/1.4 "Noto Serif", serif; color: #e3eef8; margin-top: 10mm; }
+.cover .lavagna { position: absolute; left: 14mm; top: 120mm; width: 122mm; height: 64mm; background: #23392f; border: 4.5mm solid #8b5e34; border-radius: 4mm;
+  box-shadow: 0 6mm 10mm rgba(0, 0, 0, .3); padding: 9mm 10mm; color: #f1f5ef; }
+.cover .lavagna .gesso { font: 700 15pt/1.35 "Noto Serif Display", serif; }
+.cover .lavagna .riga { font-size: 8.8pt; color: #d7e4da; margin-top: 3mm; line-height: 1.5; }
+.cover .prof { position: absolute; right: 12mm; top: 92mm; width: 78mm; height: 78mm; }
+.cover .win { position: absolute; right: 18mm; top: 22mm; display: grid; grid-template-columns: 9mm 9mm; gap: 1.2mm; transform: rotate(-3deg); opacity: .9; }
+.cover .win span { width: 9mm; height: 9mm; background: #ffffff; opacity: .85; border-radius: .6mm; }
+.cover .sotto2 { background: #faf6ee; height: 92mm; padding: 10mm 18mm; position: relative; }
+.cover .firma { position: absolute; left: 18mm; right: 18mm; bottom: 14mm; display: flex; justify-content: space-between; align-items: flex-end; }
+.cover .firma b { font: 700 13pt "Noto Serif Display"; color: var(--blu); }
+.cover .firma .v { text-align: right; font: 700 20pt "Noto Serif Display"; color: var(--ara); }
+.cover .firma small { display: block; color: var(--ink2); font: 8pt "Noto Sans"; }
+.back { background: linear-gradient(170deg, #1d5c8f, #123b5c); color: #fff; }
+.back .dentro { padding: 60mm 22mm 0; }
+.back h1 { color: #fff; font-size: 24pt; }
+.back p { color: #dbe8f4; font-size: 10pt; max-width: 125mm; }
+.back .prof { position: absolute; right: 20mm; top: 22mm; width: 42mm; height: 42mm; }
+.back .piede { position: absolute; left: 22mm; right: 22mm; bottom: 26mm; border-top: 1px solid rgba(255, 255, 255, .4); padding-top: 5mm;
+  display: flex; justify-content: space-between; font-size: 8.5pt; color: #dbe8f4; }
+.back .piede b { font: 700 11pt "Noto Serif Display"; color: #fff; }

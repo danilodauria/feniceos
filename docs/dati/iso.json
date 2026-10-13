@@ -1,0 +1,11 @@
+{
+  "versione": "2.2",
+  "nome": "FeniceOS_x64.iso",
+  "byte": 2256076800,
+  "sha256": "f5e269de68762c8c65d6266205c2a7150b0d9f9ac7a72ba3b0a2947b3da1a831",
+  "data": "2026-10-13",
+  "base": "Debian 12 «bookworm» · desktop MATE",
+  "architettura": "64 bit (amd64)",
+  "scarica": "https://sourceforge.net/projects/feniceos/files/2.2/FeniceOS_x64.iso/download",
+  "tutte_le_versioni": "https://sourceforge.net/projects/feniceos/files/"
+}

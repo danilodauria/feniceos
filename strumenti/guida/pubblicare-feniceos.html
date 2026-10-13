@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>FeniceOS – Pubblicare la ISO e il sito</title>
+<meta name="author" content="Danilo D'Auria">
+<link rel="stylesheet" href="stile-manuale.css">
+<style>
+:root { --blu: #1d3443; --blu2: #14232e; --azz: #fdf0e3; --ara: #c2410c; }
+.cover .sopra { background: radial-gradient(ellipse at 75% 115%, #f2b33d 0%, #e8702a 25%, #8a3412 50%, #1d3443 78%, #14232e 100%); height: 150mm; }
+.cover .sopra .ka { color: #f2b33d; }
+.cover .sotto2 { height: 147mm; }
+.cover .prof { top: 40mm; width: 72mm; height: 72mm; right: 14mm; }
+.back { background: linear-gradient(170deg, #1d3443, #14232e); }
+.indice-rapido { margin-top: 6mm; font-size: 10pt; }
+.indice-rapido li { margin: 1.4mm 0; }
+.bt { display: inline-block; font: 700 8.6pt "Noto Sans"; padding: .1em .65em; border-radius: 6px; border: 1px solid #c9d1d9; background: #f6f8fa; color: #24292f; white-space: nowrap; }
+.bt.verde { background: #1f883d; border-color: #1a7f37; color: #fff; }
+.bt.blu { background: #0969da; border-color: #0969da; color: #fff; }
+.menu { font-weight: 700; color: #14232e; }
+.una { display: inline-block; font: 700 7pt "Noto Sans"; letter-spacing: .12em; padding: .15em .6em; border-radius: 99px; vertical-align: middle; background: #fdf6dc; color: #a16207; margin-left: .4em; }
+.ogni { display: inline-block; font: 700 7pt "Noto Sans"; letter-spacing: .12em; padding: .15em .6em; border-radius: 99px; vertical-align: middle; background: #e8f6ec; color: #15803d; margin-left: .4em; }
+.schema { display: grid; grid-template-columns: 1fr 9mm 1fr 9mm 1fr; align-items: center; margin: 4mm 0 2mm; font-size: 8.6pt; }
+.schema .c { border: 1.4px solid var(--ara); border-radius: 8px; padding: 2.5mm; background: #fff; text-align: center; min-height: 26mm; }
+.schema .c b { display: block; color: var(--blu); font-size: 9.6pt; margin-bottom: 1mm; }
+.schema .f { text-align: center; color: var(--ara); font-size: 16pt; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="sopra">
+    <div class="ka">UN PROGETTO DI DANILO D'AURIA</div>
+    <h1>FeniceOS</h1>
+    <div class="sotto">Pubblicare la ISO e il sito<br>SourceForge per la ISO, GitHub per il sito<br>e i vademecum del Professore Digitale 3.5.3</div>
+    <img class="prof" src="fenice.svg" alt="">
+  </div>
+  <div class="sotto2">
+    <ol class="indice-rapido">
+      <li><b>Come funziona</b>: tre posti, un solo indirizzo</li>
+      <li><b>SourceForge</b>: creare il progetto <span class="una">UNA VOLTA</span></li>
+      <li><b>Caricare la ISO</b> e renderla il download predefinito</li>
+      <li><b>Il sito</b> danilodauria.github.io/feniceos <span class="una">UNA VOLTA</span></li>
+      <li><b>Controllare</b> che tutto funzioni</li>
+      <li><b>Una nuova ISO</b> <span class="ogni">OGNI VOLTA</span></li>
+      <li><b>Professore Digitale</b>: i vademecum 3.5.3 sul sito</li>
+      <li>Se qualcosa va storto</li>
+    </ol>
+    <div class="firma">
+      <div><b>Danilo D'Auria</b><small>Promemoria personale per la pubblicazione</small></div>
+      <div class="v">FeniceOS 2.2<small>Ottobre 2026</small></div>
+    </div>
+  </div>
+</section>
+<div class="segnaposto"></div>
+
+<div class="pagina">
+
+<h2 style="margin-top:2mm">1 · Come funziona, in breve</h2>
+<div class="schema">
+  <div class="c"><b>💿 SourceForge</b>la ISO (oltre 2 GB) e il suo file <code>.sha256</code>, una cartella per ogni versione</div>
+  <div class="f">→</div>
+  <div class="c"><b>📁 GitHub</b>il repository <code>feniceos</code>: sito, libretto, script di costruzione</div>
+  <div class="f">→</div>
+  <div class="c"><b>🌐 Il sito</b><code>danilodauria.github.io/feniceos</code>: la pagina con il pulsante «Scarica»</div>
+</div>
+<p>Perché due servizi: GitHub accetta file fino a <b>100 MB</b> nel repository e fino a <b>2 GB</b> nelle Release, e la ISO pesa <b>2,26 GB</b>.
+SourceForge è gratuito, non ha questo limite per i progetti liberi e distribuisce i file da server in tutto il mondo: lo usano moltissime distribuzioni.
+Il sito resta su GitHub, accanto al Professore Digitale e al Grande Quiz, e il pulsante «Scarica» porta alla ISO su SourceForge.</p>
+
+<div class="box"><span class="t">Cosa ti serve</span>
+<ul class="check">
+<li>La ISO <code>FeniceOS_x64.iso</code> e il file <code>FeniceOS_x64.iso.sha256</code> (cartella <code>Documenti\NUOVO_13102026 Terminale Fenice OS</code>).</li>
+<li>La cartella <code>feniceos</code> che ti ho consegnato in <b>Download</b>: è il sito già pronto.</li>
+<li>L'account GitHub <b>danilodauria</b> e GitHub Desktop (già pronti), un indirizzo email per SourceForge.</li>
+<li>Una connessione stabile: il caricamento della ISO dura da 20 minuti a qualche ora.</li>
+</ul></div>
+<div class="box attenzione"><span class="t">Prima di caricare: quale ISO</span>La ISO di quella cartella è stata costruita il 13 ottobre alle 10:56 con il Professore Digitale <b>3.5.2 riparato</b> dallo script (funziona).
+Il libretto descrive la 2.2 con il Professore <b>3.5.3</b>. Se vuoi che coincidano alla lettera, rifai la ISO con lo script attuale e poi segui il capitolo 6 per aggiornare il sito; altrimenti puoi pubblicare questa così com'è.</div>
+
+<h2>2 · SourceForge: creare il progetto <span class="una">SOLO LA PRIMA VOLTA</span></h2>
+<ol class="passi">
+<li>Vai su <code>sourceforge.net</code> → <span class="menu">Join</span> e crea l'account (nome utente, email, password). Conferma l'email che ti arriva.</li>
+<li>Da entrato, apri <code>sourceforge.net/create</code> (in alto: <span class="menu">Create → Create a project</span>).</li>
+<li>Compila così:
+<table><tbody>
+<tr><td style="width:30%"><b>Project Name</b></td><td>FeniceOS</td></tr>
+<tr><td><b>URL</b></td><td><code>feniceos</code> — <b>esattamente così</b>: il sito usa <code>sourceforge.net/projects/feniceos</code>. Se fosse già preso, scegline un altro (es. <code>feniceos-linux</code>) e dimmelo: aggiorno io il sito.</td></tr>
+<tr><td><b>Description</b></td><td>Sistema operativo libero e gentile, basato su Debian 12 e MATE, che parte da chiavetta USB e dà nuova vita ai computer usati. Ideato da Danilo D'Auria.</td></tr>
+</tbody></table></li>
+<li>Clicca <span class="bt verde">Create</span>. Nella pagina del progetto, in <span class="menu">Admin → Project Info</span> puoi aggiungere la descrizione lunga, il link al sito
+(<code>https://danilodauria.github.io/feniceos/</code>) e il logo (<code>docs/assets/fenice.svg</code> esportato in PNG, o uno screenshot della scrivania).</li>
+</ol>
+
+<h2>3 · Caricare la ISO</h2>
+<h3>3a · Dal browser (la strada più semplice)</h3>
+<ol class="passi">
+<li>Nel progetto apri la scheda <span class="menu">Files</span> → <span class="bt">Add Folder</span> → scrivi <code>2.2</code> → <span class="bt">Save</span>. Il nome della cartella <b>è il numero di versione</b>: il sito si aspetta proprio <code>2.2</code>.</li>
+<li>Entra nella cartella <code>2.2</code> → <span class="bt">Add File</span> → trascina <code>FeniceOS_x64.iso</code> e <code>FeniceOS_x64.iso.sha256</code>.
+<b>Non chiudere la scheda</b> finché la barra non è completa.</li>
+<li>Accanto alla ISO clicca l'icona <span class="bt">i</span> (informazioni) → in <b>Default Download For</b> spunta <b>Windows, Mac, Linux, Others</b> → <span class="bt">Save</span>.
+Così il grande pulsante verde «Download Latest Version» del progetto scarica la ISO.</li>
+</ol>
+<h3>3b · Dal PC Zorin con rsync (consigliato se il browser si interrompe)</h3>
+<p>rsync <b>riprende da dove si era fermato</b> se la connessione cade. Crea prima la cartella <code>2.2</code> dal browser (passo 1 qui sopra), poi nel Terminale, nella cartella con la ISO:</p>
+<pre>rsync -avP -e ssh FeniceOS_x64.iso FeniceOS_x64.iso.sha256 \
+  TUONOMEUTENTE@frs.sourceforge.net:/home/frs/project/feniceos/2.2/</pre>
+<p class="small">Alla prima connessione chiede di confermare la chiave del server (scrivi <code>yes</code>) e la password di SourceForge. Se si interrompe, rilancia lo stesso comando.
+Poi fai il passo 3 della sezione 3a (Default Download).</p>
+<div class="box consiglio"><span class="t">Dopo il caricamento</span>SourceForge copia il file sui suoi server nel mondo: il link di download può impiegare <b>fino a mezz'ora</b> per funzionare ovunque.</div>
+
+<h2>4 · Il sito danilodauria.github.io/feniceos <span class="una">SOLO LA PRIMA VOLTA</span></h2>
+<ol class="passi">
+<li>Sposta la cartella <code>feniceos</code> da <b>Download</b> a <code>Documenti\GitHub</code>.</li>
+<li>In GitHub Desktop: <span class="menu">File → Add local repository…</span> → scegli <code>Documenti\GitHub\feniceos</code>.
+GitHub Desktop dice che non è ancora un repository: clicca <b>«create a repository»</b> → lascia tutto com'è (nome <code>feniceos</code>, <b>senza</b> README, .gitignore e licenza: ci sono già) → <span class="bt blu">Create repository</span>.</li>
+<li>In alto clicca <span class="bt">Publish repository</span> → nome <code>feniceos</code> → <b>togli la spunta</b> a «Keep this code private» → <span class="bt blu">Publish repository</span>.
+Questa volta «Publish» è giusto: il repository su GitHub non esiste ancora.</li>
+<li>Su <code>github.com/danilodauria/feniceos</code> → <span class="menu">Settings → Pages</span> → <b>Source: Deploy from a branch</b> → Branch <b>main</b>, cartella <b>/docs</b> → <span class="bt">Save</span>.</li>
+<li>Dopo 1–2 minuti il sito è su <code>https://danilodauria.github.io/feniceos/</code>. In <span class="menu">Settings → General</span> puoi aggiungere quell'indirizzo come «Website» del repository.</li>
+</ol>
+
+<h2>5 · Controllare che tutto funzioni</h2>
+<ol class="passi">
+<li>Apri il sito: devono comparire versione <b>2.2</b>, dimensione <b>2,26 GB</b> e l'impronta che comincia con <code>f5e269de</code>.</li>
+<li>Clicca <b>Scarica la ISO</b>: deve aprirsi SourceForge e partire il download di <code>FeniceOS_x64.iso</code>.</li>
+<li>Apri il <b>libretto</b> e il <b>libretto da stampare</b> dalla sezione «Libretto, vademecum e guide».</li>
+<li>Da un telefono: la pagina si legge bene e i pulsanti si toccano facilmente.</li>
+</ol>
+
+<h2>6 · Una nuova ISO <span class="ogni">OGNI VOLTA</span></h2>
+<ol class="passi">
+<li>Sul PC Zorin costruisci la ISO: <code>sudo ./build_feniceos.sh</code> (lo script sta anche nel repository, in <code>strumenti/</code>). Provala in VirtualBox.</li>
+<li>Nella cartella del repository <code>feniceos</code> aggiorna il sito con un comando (calcola dimensione e impronta e scrive tutto da solo):
+<pre>python3 strumenti/aggiorna-iso.py ~/fenice_build/FeniceOS_x64.iso --versione 2.3</pre></li>
+<li>Su SourceForge crea la cartella <code>2.3</code>, carica la ISO e il nuovo <code>.sha256</code> (che trovi in <code>docs/download/</code>), imposta il «Default Download».</li>
+<li>Se è cambiato anche il libretto, sostituisci i due PDF in <code>docs/download/</code>.</li>
+<li>Pubblica il sito: da Zorin <code>git add -A &amp;&amp; git commit -m "FeniceOS 2.3" &amp;&amp; git push</code>, oppure da Windows con GitHub Desktop (Commit, Push).</li>
+</ol>
+<div class="box"><span class="t">Correzioni veloci senza programmi</span>Per cambiare solo un indirizzo, puoi anche modificare <code>docs/dati/iso.json</code> direttamente su github.com (icona della matita → «Commit changes»):
+il sito legge quel file a ogni apertura.</div>
+
+<h2>7 · Professore Digitale: i vademecum 3.5.3 sul sito</h2>
+<p>I due vademecum ora riportano la 3.5.3 e, nel vademecum per Linux, l'errore «Il server locale non si è avviato» con la soluzione. Vanno in due posti:</p>
+<ol class="passi">
+<li><b>Sorgenti</b>: ho già copiato i 4 file (2 PDF in <code>docs</code> e 2 HTML in <code>docs\sorgenti</code>) nella tua copia <code>Documenti\GitHub\professore-digitale</code>.
+In GitHub Desktop vedrai <b>4 modifiche</b>: Summary <code>Vademecum aggiornati alla 3.5.3</code> → <span class="bt blu">Commit to main</span> → <span class="bt">Push origin</span>.</li>
+<li><b>Sito</b>: in <code>Download\ProfessoreDigitale-3.5.3-vademecum</code> fai doppio clic su <b>UNISCI.bat</b>: ottieni il nuovo <code>sito-3.5.3.zip</code>.
+Su GitHub apri <span class="menu">Releases → Professore Digitale 3.5.3 → ✏️ Edit</span>, elimina il vecchio <code>sito-3.5.3.zip</code> (la ❌ accanto), trascina quello nuovo e clicca <span class="bt verde">Update release</span>.</li>
+<li>Apri <span class="menu">Actions → Pubblica il sito → Run workflow</span>, scrivi <code>v3.5.3</code> e clicca <span class="bt verde">Run workflow</span>. Quando ha la spunta verde, i vademecum nuovi sono sul sito.</li>
+</ol>
+<p class="small">Da Zorin, con <code>gh</code>, gli stessi due passi del sito sono:
+<code>gh release upload v3.5.3 sito-3.5.3.zip --clobber -R danilodauria/professore-digitale</code> e
+<code>gh workflow run pubblica-sito.yml -R danilodauria/professore-digitale -f versione=v3.5.3</code>.</p>
+
+<h2>Se qualcosa va storto</h2>
+<table><thead><tr><th style="width:36%">Cosa succede</th><th>Cosa fare</th></tr></thead><tbody>
+<tr><td>Su SourceForge l'URL <code>feniceos</code> è già preso</td><td>Scegline un altro e dimmelo: cambio io gli indirizzi del sito (o lancia <code>aggiorna-iso.py</code> con <code>--url</code>).</td></tr>
+<tr><td>Il caricamento dal browser si interrompe</td><td>Usa rsync dal PC Zorin (sezione 3b): riprende da dove si era fermato.</td></tr>
+<tr><td>Il pulsante «Scarica» dà «file non trovato»</td><td>Controlla che la cartella su SourceForge si chiami esattamente <code>2.2</code> e il file <code>FeniceOS_x64.iso</code>; dopo il caricamento aspetta fino a mezz'ora.</td></tr>
+<tr><td>Il sito su GitHub mostra «404»</td><td>Controlla in Settings → Pages: branch <b>main</b>, cartella <b>/docs</b>. Il repository deve essere <b>Public</b>.</td></tr>
+<tr><td>L'impronta non corrisponde dopo il download</td><td>Il file è arrivato rovinato o è un'altra ISO: riscaricalo; se succede sempre, ricarica la ISO su SourceForge e controlla con <code>sha256sum -c</code>.</td></tr>
+</tbody></table>
+
+</div>
+<div class="segnaposto fine"></div>
+
+<section class="back">
+  <img class="prof" src="fenice.svg" alt="">
+  <div class="dentro">
+    <h1>Un computer che funziona<br>non è un rifiuto.</h1>
+    <p>FeniceOS · Professore Digitale · Il Grande Quiz dell'Informatica · Tecnologia Gentile.</p>
+  </div>
+  <div class="piede"><div><b>Danilo D'Auria</b><br>Tecnico IT &amp; Divulgatore Digitale per il Sociale<br>danilodauria.site@gmail.com</div>
+  <div style="text-align:right">Testi CC BY-NC-SA 4.0 · codice MIT<br>© 2026 Danilo D'Auria · Ottobre 2026</div></div>
+</section>
+</body>
+</html>

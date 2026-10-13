@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FeniceOS · Scarica la distribuzione</title>
+<meta name="description" content="FeniceOS è un sistema operativo libero e gratuito, basato su Debian 12 con desktop MATE, che parte da chiavetta USB e dà nuova vita ai computer usati. Ideato e sviluppato da Danilo D'Auria.">
+<meta name="author" content="Danilo D'Auria">
+<meta name="theme-color" content="#14232e">
+<meta property="og:title" content="FeniceOS — un computer che funziona non è un rifiuto">
+<meta property="og:description" content="Scarica FeniceOS: Debian 12 + MATE, in italiano, con il Professore Digitale già installato. Parte da chiavetta USB.">
+<meta property="og:image" content="assets/fenice.svg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/stile.css">
+</head>
+<body>
+<a class="salta" href="#scarica">Vai al download</a>
+
+<header class="barra">
+  <div class="contenitore">
+    <a class="marchio" href="#"><img src="assets/fenice.svg" alt="">FeniceOS</a>
+    <nav aria-label="Sezioni">
+      <a href="#scarica">Scarica</a>
+      <a href="#dentro">Cosa contiene</a>
+      <a href="#chiavetta">Chiavetta</a>
+      <a href="#documenti">Libretto e guide</a>
+      <a href="#progetti">Progetti</a>
+      <a href="#domande">Domande</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="eroe">
+  <div class="contenitore">
+    <div>
+      <span class="occhiello">Un sistema libero e gentile · Debian 12 · MATE · in italiano</span>
+      <h1>FeniceOS</h1>
+      <p class="motto">«Un computer che funziona non è un rifiuto.»</p>
+      <p class="sotto">FeniceOS è un sistema operativo <b>libero e gratuito</b> che parte da una <b>chiavetta USB</b>, senza toccare il disco, e
+        rende di nuovo utilizzabili anche i computer più vecchi. È pensato per centri anziani, scuole, biblioteche e centri sociali:
+        dentro c'è già il <b>Professore Digitale</b> per imparare l'informatica con calma.</p>
+      <div class="azioni">
+        <a class="bt bt-fuoco bt-grande" id="bt-scarica" href="#scarica">⬇ Scarica FeniceOS <span data-iso="versione">2.2</span></a>
+        <a class="bt bt-vetro" href="download/FeniceOS_Libretto.pdf">📘 Libretto d'uso</a>
+      </div>
+      <ul class="chip">
+        <li>Gratuito</li><li>Parte da chiavetta USB</li><li>Nessuna telemetria</li><li>Per PC a 64 bit</li><li>BIOS e UEFI</li>
+      </ul>
+    </div>
+    <img class="logo-grande" src="assets/fenice.svg" alt="Il logo di FeniceOS: una fenice davanti al sole">
+  </div>
+</section>
+
+<section class="blocco" id="scarica">
+  <div class="contenitore">
+    <span class="occhiello">Download</span>
+    <h2>Scarica FeniceOS</h2>
+    <p class="intro">Un unico file, la <b>ISO</b>: si scrive su una chiavetta USB da almeno 8 GB e si avvia il computer da lì.
+      Il file è grande, quindi è ospitato su <b>SourceForge</b>, il servizio gratuito usato da molti progetti liberi, con server in tutto il mondo.</p>
+    <div class="scarica">
+      <div class="carta scheda-file">
+        <h3 style="margin:0">💿 FeniceOS <span data-iso="versione">2.2</span> — immagine live</h3>
+        <dl class="dati">
+          <dt>File</dt><dd class="mono" data-iso="nome">FeniceOS_x64.iso</dd>
+          <dt>Dimensione</dt><dd data-iso="dimensione">2,26 GB</dd>
+          <dt>Base</dt><dd data-iso="base">Debian 12 «bookworm» · desktop MATE</dd>
+          <dt>Computer</dt><dd data-iso="architettura">64 bit (amd64)</dd>
+          <dt>Data</dt><dd data-iso="data_lunga">13 ottobre 2026</dd>
+        </dl>
+        <div class="azioni">
+          <a class="bt bt-fuoco bt-grande" data-iso-href="scarica" href="https://sourceforge.net/projects/feniceos/files/2.2/FeniceOS_x64.iso/download">⬇ Scarica la ISO<small>da SourceForge · <span data-iso="dimensione">2,26 GB</span></small></a>
+          <a class="bt bt-chiaro" href="download/FeniceOS_x64.iso.sha256" download>🔐 File .sha256</a>
+        </div>
+        <p class="piccolo" style="margin:.9rem 0 .3rem"><b>Impronta SHA-256</b> — serve a controllare che il file sia arrivato intero:</p>
+        <div class="impronta"><code id="sha" data-iso="sha256">f5e269de68762c8c65d6266205c2a7150b0d9f9ac7a72ba3b0a2947b3da1a831</code>
+          <button class="bt bt-chiaro" type="button" data-copia="#sha" aria-label="Copia l'impronta">📋 Copia</button></div>
+        <p class="piccolo">Le versioni precedenti stanno nella <a data-iso-href="tutte_le_versioni" href="https://sourceforge.net/projects/feniceos/files/">pagina dei file su SourceForge</a>.</p>
+      </div>
+      <div>
+        <div class="carta">
+          <h3 style="margin-top:0">Controlla il file prima di usarlo</h3>
+          <p class="piccolo" style="margin-top:0">Confronta il risultato con l'impronta qui accanto: devono essere <b>identici</b>. Se sono diversi, scarica di nuovo.</p>
+          <p style="margin:.6rem 0 .2rem"><b>Windows</b> (PowerShell, nella cartella Download):</p>
+          <pre><code>Get-FileHash .\FeniceOS_x64.iso -Algorithm SHA256</code></pre>
+          <p style="margin:.6rem 0 .2rem"><b>Linux</b> (Terminale, con il file .sha256 accanto):</p>
+          <pre><code>sha256sum -c FeniceOS_x64.iso.sha256</code></pre>
+          <p class="piccolo" style="margin:0">Deve rispondere <code>FeniceOS_x64.iso: OK</code>.</p>
+        </div>
+        <div class="nota attenzione"><b>Prima di cominciare</b>Scrivere la ISO <b>cancella tutto</b> quello che c'è sulla chiavetta. Usane una vuota o copia altrove i tuoi file.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" id="dentro">
+  <div class="contenitore">
+    <span class="occhiello">Cosa contiene</span>
+    <h2>Tutto pronto, in italiano, dal primo avvio</h2>
+    <p class="intro">Una scrivania ordinata, con la barra in alto e il dock delle icone in basso, e i programmi che servono davvero. Le voci che non servono sono nascoste, per non confondere.</p>
+    <div class="griglia">
+      <div class="carta"><span class="ico">🎓</span><h3>Professore Digitale</h3><p>Lezioni di informatica, esercizi, quiz con attestato e una guida che risponde alle domande. Funziona senza Internet.</p></div>
+      <div class="carta"><span class="ico">🏠</span><h3>Centro FeniceOS</h3><p>Grandi pulsanti per partire: Professore, guida offline, quiz, video, ottimizzazione, suono di avvio e informazioni.</p></div>
+      <div class="carta"><span class="ico">📝</span><h3>LibreOffice in italiano</h3><p>Writer, Calc, Impress, Draw e Math, con dizionario e sillabazione. Apre e salva anche i file di Word, Excel e PowerPoint.</p></div>
+      <div class="carta"><span class="ico">✉️</span><h3>Posta elettronica</h3><p>Thunderbird per l'uso di tutti i giorni e Claws Mail, leggerissimo, per i PC più datati.</p></div>
+      <div class="carta"><span class="ico">🌐</span><h3>Internet</h3><p>Firefox ESR, stabile e consigliato da Debian, e Falkon, più leggero.</p></div>
+      <div class="carta"><span class="ico">🛍️</span><h3>Negozio dei programmi</h3><p>Cerca e installa altri programmi con un clic, dai pacchetti Debian e da Flathub.</p></div>
+      <div class="carta"><span class="ico">⚡</span><h3>Fenice Ottimizza</h3><p>Una finestra guidata che rende il sistema più fluido con poca memoria: RAM compressa, anti-blocco, pulizia.</p></div>
+      <div class="carta"><span class="ico">🌅</span><h3>Suono e sfondo originali</h3><p>Una breve melodia di avvio e lo sfondo «Alba della Fenice», creati apposta e liberi (licenza MIT).</p></div>
+    </div>
+    <div class="nota" style="margin-top:1.4rem"><b>Privacy</b>Nessun dato viene inviato a terzi, nessun tracciamento, nessuna telemetria. Il Professore Digitale e la guida lavorano offline.</div>
+  </div>
+</section>
+
+<section class="blocco" id="requisiti">
+  <div class="contenitore">
+    <span class="occhiello">Requisiti</span>
+    <h2>Su quali computer funziona</h2>
+    <div class="scorri"><table class="tabella">
+      <tr><th style="width:28%">Cosa</th><th>Che cosa serve</th></tr>
+      <tr><td>Processore</td><td>A <b>64 bit</b> (amd64). Non parte sui computer solo a 32 bit.</td></tr>
+      <tr><td>Memoria (RAM)</td><td>Consigliati <b>2 GB</b> o più. Con poca memoria aiuta <b>Fenice Ottimizza</b>, che comprime la RAM.</td></tr>
+      <tr><td>Avvio</td><td>Il computer deve poter partire da chiavetta USB. L'immagine è ibrida: funziona con <b>BIOS</b> tradizionale e con <b>UEFI</b>. Se c'è Secure Boot e la chiavetta non compare, va disattivato.</td></tr>
+      <tr><td>Chiavetta</td><td>Almeno <b>8 GB</b>. Verrà cancellata.</td></tr>
+      <tr><td>Disco</td><td>Non serve: FeniceOS gira dalla chiavetta e <b>non tocca</b> il disco del computer.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section class="blocco" id="chiavetta">
+  <div class="contenitore">
+    <span class="occhiello">Come si usa</span>
+    <h2>Dalla ISO alla scrivania, in quattro passi</h2>
+    <div class="due">
+      <ol class="passi">
+        <li><h3>Scarica e controlla</h3><p>Scarica la ISO e confronta l'impronta SHA-256, come spiegato qui sopra.</p></li>
+        <li><h3>Scrivi la chiavetta</h3><p>Su <b>Windows</b> usa <a href="https://rufus.ie/it/">Rufus</a>: scegli la chiavetta giusta, premi SELEZIONA e scegli la ISO,
+          lascia lo schema consigliato (GPT per i PC recenti, MBR per i vecchi) e premi AVVIA. Se Rufus chiede la modalità, scegli <b>Immagine DD</b> se la modalità ISO non funziona.
+          In alternativa <a href="https://etcher.balena.io/">balenaEtcher</a>, anche su Linux e macOS.</p></li>
+        <li><h3>Avvia dalla chiavetta</h3><p>Inserisci la chiavetta, accendi e premi subito, più volte, il tasto del menu di avvio (vedi la tabella). Scegli la chiavetta e premi Invio.</p></li>
+        <li><h3>Entra nella sessione live</h3><p>Nel menu di FeniceOS scegli la prima voce e attendi circa un minuto: quando senti il suono di avvio, sei dentro.
+          L'utente è <code>user</code>; se il sistema chiede la password per le operazioni di amministrazione, è <code>live</code>.</p></li>
+      </ol>
+      <div>
+        <div class="scorri"><table class="tabella">
+          <tr><th>Marca</th><th>Tasto del menu di avvio</th></tr>
+          <tr><td>Acer, Asus, Lenovo</td><td>F12, Esc o F2</td></tr>
+          <tr><td>HP</td><td>Esc, poi F9</td></tr>
+          <tr><td>Dell</td><td>F12</td></tr>
+          <tr><td>Samsung, Toshiba</td><td>F2, F12 o Esc</td></tr>
+          <tr><td>Mac con processore Intel</td><td>tieni premuto Alt (Option)</td></tr>
+        </table></div>
+        <div class="nota attenzione"><b>Sessione live: salva fuori</b>Ciò che fai resta nella memoria e sparisce allo spegnimento. Copia i tuoi file su un disco esterno o su un'altra chiavetta prima di spegnere.
+          Questa edizione non ha un installatore: FeniceOS gira dalla chiavetta.</div>
+        <div class="nota"><b>Prima di usarla sul serio</b>Se vuoi, provala in una macchina virtuale (VirtualBox, almeno 2 GB di memoria): il libretto spiega come, al capitolo 19.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" id="documenti">
+  <div class="contenitore">
+    <span class="occhiello">Libretto, vademecum e guide</span>
+    <h2>Tutto quello che c'è da sapere, anche su carta</h2>
+    <p class="intro">Il libretto di FeniceOS ha due parti: il <b>vademecum di tutti i giorni</b> (capitoli 1–14), per chi lo usa, e il <b>manuale di creazione</b> (capitoli 15–24), per chi prepara la chiavetta e costruisce la ISO.</p>
+    <div class="griglia">
+      <a class="carta doc" href="download/FeniceOS_Libretto.pdf"><span class="ico">📘</span><span><h3>Libretto d'uso e manuale</h3><p>Da leggere sullo schermo · 40 pagine · PDF</p><em>Apri il PDF →</em></span></a>
+      <a class="carta doc" href="download/FeniceOS_Libretto_stampa_A4.pdf"><span class="ico">🖨️</span><span><h3>Libretto da stampare</h3><p>Due pagine per foglio A4, da piegare a libretto · 20 fogli · PDF</p><em>Apri il PDF →</em></span></a>
+      <a class="carta doc" href="https://danilodauria.github.io/grande-quiz/vademecum/"><span class="ico">🧭</span><span><h3>Vademecum interattivo</h3><p>La guida di FeniceOS da sfogliare nel browser, anche offline.</p><em>Apri →</em></span></a>
+      <a class="carta doc" href="https://danilodauria.github.io/grande-quiz/manuale/"><span class="ico">📗</span><span><h3>Manuale «Tecnologia Gentile per Tutte le Età»</h3><p>Il manuale di FeniceOS con le sue domande per livello.</p><em>Apri →</em></span></a>
+      <a class="carta doc" href="https://danilodauria.github.io/grande-quiz/download/Vademecum_Quiz_Interattivo_FeniceOS.pdf"><span class="ico">📄</span><span><h3>Vademecum dei quiz interattivi</h3><p>Come usare in aula il quiz, la scheda risposte e lo schermo domande.</p><em>Apri il PDF →</em></span></a>
+      <a class="carta doc" href="https://danilodauria.github.io/professore-digitale/"><span class="ico">🎓</span><span><h3>Vademecum del Professore Digitale</h3><p>Le guide complete del programma incluso in FeniceOS, per Linux e per Windows.</p><em>Apri →</em></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" id="progetti">
+  <div class="contenitore">
+    <span class="occhiello">Il mondo FeniceOS</span>
+    <h2>Un solo progetto, tanti strumenti</h2>
+    <p class="intro">FeniceOS, il Professore Digitale, il Grande Quiz e il libro «Tecnologia Gentile» nascono dallo stesso autore e dalla stessa idea: imparare con calma, offline, con contenuti verificati.</p>
+    <div class="griglia">
+      <a class="carta doc" href="https://danilodauria.github.io/professore-digitale/"><span class="ico">🎓</span><span><h3>Professore Digitale</h3><p>Il maestro paziente per imparare computer, telefono e Internet. Per Linux, Windows e telefono. Gratuito, senza pubblicità.</p><em>Vai al sito →</em></span></a>
+      <a class="carta doc" href="https://danilodauria.github.io/grande-quiz/"><span class="ico">⏱️</span><span><h3>Il Grande Quiz dell'Informatica</h3><p>264 domande dalle basi ai livelli esperti, più 66 domande del manuale FeniceOS, con timer, scheda risposte e schermo per l'aula.</p><em>Vai al sito →</em></span></a>
+    </div>
+    <div class="carta libro" style="margin-top:1rem">
+      <img src="assets/tecnologia-gentile.jpg" alt="Copertina del libro «Tecnologia Gentile: Informatica Sostenibile» di Danilo D'Auria" width="293" height="434">
+      <div>
+        <h3 style="margin:0 0 .4rem">📖 «Tecnologia Gentile: Informatica Sostenibile»</h3>
+        <p style="margin:0 0 .8rem;color:var(--ink2)">Il libro di Danilo D'Auria da cui nasce la filosofia di FeniceOS: mettere al centro la persona e non la macchina, riusare i computer invece di buttarli,
+          combattere l'obsolescenza programmata con il software libero. Quattro principi: <b>comprensibilità</b>, <b>accessibilità</b>, <b>sostenibilità</b> e <b>rispetto</b>.</p>
+        <a class="bt bt-chiaro" href="https://www.amazon.it/dp/B0H62Z3CYB">Il libro su Amazon →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" id="costruire">
+  <div class="contenitore">
+    <span class="occhiello">Per chi vuole costruirla</span>
+    <h2>La ISO nasce da uno script, aperto a tutti</h2>
+    <p class="intro">FeniceOS non si monta a mano: la costruisce lo script <b>build_feniceos.sh</b>, una ricetta che riparte ogni volta da zero e segue sempre gli stessi passi
+      (un ambiente Debian 12 isolato con debootstrap, live-build, controllo dei pacchetti, prova del Professore Digitale, immagine ibrida e impronta SHA-256).</p>
+    <div class="due">
+      <div class="carta">
+        <h3 style="margin-top:0">Servono</h3>
+        <p style="margin:0;color:var(--ink2)">Un PC con Debian, Ubuntu o Zorin OS, Internet, circa <b>25 GB</b> liberi e i permessi di amministratore. Dai 30 minuti a due ore.</p>
+        <pre><code>chmod +x build_feniceos.sh
+sudo ./build_feniceos.sh</code></pre>
+        <a class="bt bt-chiaro" href="download/build_feniceos.sh" download>⬇ Scarica lo script</a>
+      </div>
+      <div class="carta">
+        <h3 style="margin-top:0">Il risultato</h3>
+        <p style="margin:0 0 .6rem;color:var(--ink2)">Nella cartella <code>~/fenice_build</code> trovi <code>FeniceOS_x64.iso</code>, il file <code>.sha256</code> e il registro <code>build.log</code>.
+          Tutti i passaggi, le variabili e i problemi più comuni sono nel <a href="download/FeniceOS_Libretto.pdf">libretto</a>, capitoli 15–24.</p>
+        <p class="piccolo" style="margin:0">Per vedere che cosa entrerebbe nella ISO senza costruirla: <code>./build_feniceos.sh --tree-only</code>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blocco" id="domande">
+  <div class="contenitore">
+    <span class="occhiello">Domande frequenti</span>
+    <h2>Se qualcosa non va</h2>
+    <details class="faq"><summary>La chiavetta non parte, il computer si avvia come sempre</summary>
+      <div><p>Hai premuto il tasto del menu di avvio troppo tardi: spegni e riprova, premendolo a ripetizione appena accendi. Prova anche un'altra porta USB.</p>
+      <p>Se la chiavetta non compare proprio, entra nel BIOS/UEFI e disattiva <b>Secure Boot</b> (annota la modifica per poterla ripristinare). Se non basta, ricrea la chiavetta con Rufus in modalità <b>Immagine DD</b>.</p></div></details>
+    <details class="faq"><summary>Dopo il menu lo schermo resta nero</summary>
+      <div><p>Riavvia e scegli la modalità sicura per la grafica nel menu di avvio. Il libretto, al capitolo 14, raccoglie gli altri casi.</p></div></details>
+    <details class="faq"><summary>Il Wi-Fi non funziona</summary>
+      <div><p>FeniceOS cerca di includere i firmware delle schede più comuni (Intel, Realtek, Atheros, Broadcom), ma alcune schede ne richiedono altri. Nel frattempo usa il cavo di rete.</p></div></details>
+    <details class="faq"><summary>Posso installarla sul disco del computer?</summary>
+      <div><p>Questa edizione è <b>solo live</b>: non ha un installatore e non tocca il disco. È la scelta più sicura per aule e centri, dove ogni avvio riparte pulito.</p></div></details>
+    <details class="faq"><summary>Dove finiscono i file che salvo?</summary>
+      <div><p>Nella memoria del computer: allo spegnimento spariscono. Salva sempre su un'altra chiavetta, su un disco esterno o su un servizio online.</p></div></details>
+    <details class="faq"><summary>Funziona sui computer a 32 bit?</summary>
+      <div><p>No: FeniceOS è preparata per i processori a 64 bit (amd64). Quasi tutti i computer degli ultimi 15 anni lo sono.</p></div></details>
+    <details class="faq"><summary>Il Professore Digitale non parte («Il server locale non si è avviato»)</summary>
+      <div><p>Era un errore del pacchetto 3.5.2 del Professore Digitale, corretto nella 3.5.3. Lo script di FeniceOS prova sempre il programma prima di creare la ISO.
+        Chiudi il messaggio, aspetta dieci secondi e riaprilo dal dock; se serve, riavvia. Il libretto ne parla al capitolo 6.</p></div></details>
+    <details class="faq"><summary>FeniceOS è gratuita anche per una scuola o un'associazione?</summary>
+      <div><p>Sì, sempre. Puoi copiarla, usarla e regalare le chiavette. Per i testi e la grafica di FeniceOS vale la licenza CC BY-NC-SA 4.0: cita l'autore e non usarli a scopo commerciale.</p></div></details>
+  </div>
+</section>
+
+<section class="blocco" id="licenze">
+  <div class="contenitore">
+    <span class="occhiello">Licenze e crediti</span>
+    <h2>Libera, e grata a chi l'ha resa possibile</h2>
+    <div class="scorri"><table class="tabella">
+      <tr><th style="width:45%">Componente</th><th>Licenza</th></tr>
+      <tr><td>FeniceOS: script di costruzione, suono di avvio, sfondo, Centro FeniceOS, Fenice Ottimizza</td><td>MIT</td></tr>
+      <tr><td>Libretto, testi di questo sito, logo e grafica di FeniceOS</td><td><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">CC BY-NC-SA 4.0</a> — © 2026 Danilo D'Auria</td></tr>
+      <tr><td>Professore Digitale</td><td>codice MIT · contenuti CC BY-NC-SA 4.0</td></tr>
+      <tr><td>Tema WhiteSur · icone WhiteSur · Plank · font Inter</td><td>MIT · GPL-3.0 · GPL-3.0 · OFL-1.1</td></tr>
+      <tr><td>Debian, MATE, LibreOffice, Firefox, Thunderbird e gli altri programmi</td><td>le licenze libere dei rispettivi progetti</td></tr>
+    </table></div>
+    <p class="piccolo">Il testo completo delle licenze è nel file <code>LICENSE-FENICE.txt</code> dentro la ISO. I sorgenti dei pacchetti Debian inclusi sono disponibili su
+      <a href="https://sources.debian.org/">sources.debian.org</a> e, nella versione esatta, su <a href="https://snapshot.debian.org/">snapshot.debian.org</a>;
+      lo script che costruisce la ISO è <a href="download/build_feniceos.sh">qui</a>. FeniceOS è un progetto indipendente, non affiliato a Debian né ad altre aziende:
+      «Debian» è un marchio registrato di Software in the Public Interest, Inc.; FeniceOS non usa marchi, loghi, suoni o icone di Apple o di altre aziende.
+      Il sistema è distribuito «così com'è», senza garanzie: prima di usare un computer con dati importanti, fai una copia di sicurezza.</p>
+  </div>
+</section>
+</main>
+
+<footer class="piede">
+  <div class="contenitore">
+    <div>
+      <a class="marchio" href="#"><img src="assets/fenice.svg" alt="">FeniceOS</a>
+      <p style="margin:.6rem 0">Ideato e sviluppato da <b>Danilo D'Auria</b> — Tecnico IT e Divulgatore Digitale per il Sociale, autore di «Tecnologia Gentile: Informatica Sostenibile».</p>
+      <p style="margin:0">Per segnalazioni e collaborazioni: <a href="mailto:danilodauria.site@gmail.com">danilodauria.site@gmail.com</a></p>
+    </div>
+    <div>
+      <p style="margin:0 0 .4rem"><b>Gli altri progetti</b><br><a href="https://danilodauria.github.io/professore-digitale/">Professore Digitale</a> ·
+        <a href="https://danilodauria.github.io/grande-quiz/">Il Grande Quiz dell'Informatica</a></p>
+      <p class="cc" style="margin:.6rem 0 0">Testi e grafica © 2026 Danilo D'Auria · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it">CC BY-NC-SA 4.0</a> · codice del sito MIT</p>
+    </div>
+  </div>
+</footer>
+<div class="avviso-copiato" id="avviso" role="status" aria-live="polite"></div>
+<script src="assets/sito.js"></script>
+</body>
+</html>
